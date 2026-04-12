@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#learning IFS
+
+while IFS=: read -r uname _ uid _ _ homedir _
+do 
+	echo "$uname:$uid:$homedir"
+done < "/etc/passwd"
